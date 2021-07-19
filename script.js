@@ -25,9 +25,11 @@ class Timer {
     this.startButton.addEventListener("click", this.start)
     this.pauseButton.addEventListener("click", this.pause)
   }
+
   start() {
     console.log("Start the timer!")
   }
+
   pause() {
     console.log("Pause the timer!")
   }
@@ -38,3 +40,26 @@ const startButton = document.querySelector("#start")
 const pauseButton = document.querySelector("#pause")
 
 const timer = new Timer(durationInput, startButton, pauseButton)
+
+/* Determining the value of THIS */
+
+/* using ()=>{} write console.log(this) on the first valid line above the arrow function.  value of THIS in the arrow function will be equal to that console log */
+
+console.log(this)
+const printThis = () => {
+  console.log(this) //what is the value of this?  its equal to the the first line of code above the function. WINDOW
+}
+printThis()
+
+const color = {
+  printColor() {
+    console.log(this)
+    const printThis = () => {
+      console.log(this)
+    }
+    printThis()
+  },
+}
+color.printColor()
+
+/*  */
