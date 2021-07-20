@@ -32,13 +32,26 @@ class Timer {
     this.interval = setInterval(this.tick, 1000)
   }
 
-  tick = () => {
-    console.log("tick")
-  }
-
   pause = () => {
     console.log("Timer Paused!")
     clearInterval(this.interval)
+  }
+
+  tick = () => {
+    console.log("tick")
+    if (this.timeRemaining <= 0) {
+      this.pause()
+    } else {
+      this.timeRemaining = this.timeRemaining - 1
+    }
+  }
+  //getters and setters
+  get timeRemaining() {
+    return parseFloat(this.durationInput.value)
+  }
+
+  set timeRemaining(time) {
+    this.durationInput.value = time
   }
 }
 
