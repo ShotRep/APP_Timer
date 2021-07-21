@@ -3,6 +3,7 @@ class Timer {
     this.durationInput = durationInput
     this.startButton = startButton
     this.pauseButton = pauseButton
+    /* allow callbacks to either run or not without errors */
     if (callbacks) {
       this.onStart = callbacks.onStart
       this.onTick = callbacks.onTick
@@ -41,6 +42,7 @@ class Timer {
       }
     }
   }
+
   /* getters and setters */
   get timeRemaining() {
     return parseFloat(this.durationInput.value)
