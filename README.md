@@ -31,7 +31,7 @@ a.) reset the border. - EVENT resets the border
 
 b.) reset internal timer to get ready for another run
 
-Break the problem down into small parts as much as needed.
+
 
 <!-- LICENSE -->
 ## License

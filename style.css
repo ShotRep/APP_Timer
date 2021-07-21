@@ -5,3 +5,7 @@ body {
 button {
   width: 75px;
 }
+
+svg {
+  border: 1px solid white;
+}
